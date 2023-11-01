@@ -1,4 +1,4 @@
-//import React, { useState } from "react";
+
 import { useParams, Navigate } from "react-router-dom";
 import DataFichLogement from "../../datas/logement.json";
 import Tag from "./Tag";
@@ -8,17 +8,17 @@ import Rate from "./Rate";
 import Host from "./Host";
 
 const FicheLogementDisplay = () => {
-  /* Récupère la bonne fiche */
+
   const { id } = useParams();
 
   const ficheLogement = DataFichLogement.find((logement) => logement.id === id);
 
-  /* Tags */
+
   const tagsLogement = ficheLogement?.tags.map((tags, i) => {
     return <Tag key={i} nom={tags} />;
   });
 
-  /* Équipements */
+
   const equipements = ficheLogement?.equipments.map((equipment, i) => {
     return (
       <ul key={i}>

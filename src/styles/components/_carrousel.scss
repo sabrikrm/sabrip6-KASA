@@ -20,7 +20,7 @@
   bottom: 0%;
   border-radius: 10px;
   opacity: 0;
-  transition: opacity ease-in-out 0.6s; //petit effet d'apparition progressive de l'image dans le slide
+  transition: opacity ease-in-out 0.6s; 
 
   @media screen and (min-width: $breakpoint-desktop) {
     border-radius: 15px;
