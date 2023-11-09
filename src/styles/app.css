@@ -301,6 +301,22 @@ li {
   }
 }
 
+@keyframes arrowUp {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes arrowDown {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
 .collapse {
   display: flex;
   width: 100%;
@@ -341,6 +357,12 @@ li {
 }
 .collapse__dropdown__title p i {
   cursor: pointer;
+}
+.collapse__dropdown__title p i.arrow-animate-up {
+  animation: arrowUp 0.5s ease-in-out forwards;
+}
+.collapse__dropdown__title p i.arrow-animate-down {
+  animation: arrowDown 0.5s ease-in-out forwards;
 }
 .collapse__dropdown__content {
   background-color: #f7f7f7;

@@ -1,29 +1,22 @@
 import React, { useState } from "react";
 
 const Collapse = ({ title, content }) => {
-
   const [isOpen, setIsOpen] = useState(false); 
 
-
-  const display = () => {
+  const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    
     <div className="collapse__dropdown__container">
       <div className="collapse__dropdown__title">
         <h2>{title}</h2>
-        <p onClick={display}>
-          {isOpen ? (
-            <i className="fa-solid fa-chevron-up"></i>
-          ) : (
-            <i className="fa-solid fa-chevron-down"></i>
-          )}
+        <p onClick={toggleCollapse}>
+          <i className={`fa-solid ${isOpen ? 'fa-chevron-up arrow-animate-up' : 'fa-chevron-down arrow-animate-down'}`}></i>
         </p>
       </div>
       {/* Si le collapse est à TRUE alors il affichera la description */}
-      <div className="collapse__dropdown__content">
+      <div className={`collapse__dropdown__content ${isOpen ? 'content-visible' : ''}`}>
         {isOpen && <p>{content}</p>}
       </div>
     </div>
