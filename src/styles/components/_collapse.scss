@@ -32,13 +32,15 @@
         color: $tertiary-color;
         i {
           cursor: pointer;
-          transition: transform 0.5s ease-in-out; // Appliquez une transition à la propriété transform
+          transition: transform 0.5s ease-in-out; //  transitionpropriété transform
+
+          // supprimer fleche de haut 
           
           &.arrow-animate-up {
-            transform: rotate(180deg); // Tournez la flèche vers le haut
+            transform: rotate(180deg); // tourne la flèche vers le haut
           }
           &.arrow-animate-down {
-            transform: rotate(0deg); // Retournez la flèche vers le bas
+            transform: rotate(0deg); // tourne la flèche vers le bas
           }
         }
       }

@@ -67,11 +67,11 @@ const FicheLogementDisplay = () => {
             <div className="description-centent__description">
               <Collapse
                 title="Description"
-                content={ficheLogement?.description}
+                content={ficheLogement.description}
               />
             </div>
             <div className="description-centent__equipement">
-              <Collapse title="Équipements" content={equipements} />
+              <Collapse title="Équipements" content={ficheLogement.equipments} />
             </div>
           </div>
         </div>
