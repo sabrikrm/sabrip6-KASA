@@ -1,13 +1,3 @@
-@keyframes arrowUp {
-  0% { transform: translateY(5px); }
-  100% { transform: translateY(-5px); }
-}
-
-@keyframes arrowDown {
-  0% { transform: translateY(-5px); }
-  100% { transform: translateY(5px); }
-}
-
 .collapse {
   display: flex;
   width: 100%;
@@ -42,11 +32,13 @@
         color: $tertiary-color;
         i {
           cursor: pointer;
+          transition: transform 0.5s ease-in-out; // Appliquez une transition à la propriété transform
+          
           &.arrow-animate-up {
-            animation: arrowUp 0.5s ease-in-out forwards;
+            transform: rotate(180deg); // Tournez la flèche vers le haut
           }
           &.arrow-animate-down {
-            animation: arrowDown 0.5s ease-in-out forwards;
+            transform: rotate(0deg); // Retournez la flèche vers le bas
           }
         }
       }
@@ -54,7 +46,6 @@
     &__content {
       background-color: $secondary-color;
       width: 100%;
-
       border-radius: 5px;
 
       @media screen and (min-width: $breakpoint-desktop) {
