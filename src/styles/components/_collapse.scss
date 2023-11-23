@@ -37,10 +37,10 @@
           // supprimer fleche de haut 
           
           &.arrow-animate-up {
-            transform: rotate(180deg); // tourne la flèche vers le haut
+            transform: rotate(-180deg); // tourne la flèche vers le haut
           }
           &.arrow-animate-down {
-            transform: rotate(0deg); // tourne la flèche vers le bas
+            transform: rotate(180deg); // tourne la flèche vers le bas
           }
         }
       }
