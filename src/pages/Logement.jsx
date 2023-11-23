@@ -18,7 +18,7 @@ function Logement() {
       try {
         await new Promise((resolve) => setTimeout(resolve, 1000));
         const response = await axios.get(
-          // Get the correct URL for deployment on gh pages
+          
           process.env.PUBLIC_URL + "/logements.json"
         );
         const logementData = response.data.find(
@@ -36,7 +36,7 @@ function Logement() {
     };
 
     fetchLogement();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+   
   }, []);
 
   if (isDataLoading || !logement) {
