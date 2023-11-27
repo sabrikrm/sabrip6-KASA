@@ -27,7 +27,7 @@ function Logement() {
         if (logementData) {
           setLogement(logementData);
         } else {
-          navigate("/404");
+          navigate("/404"); //Si un logement correspondant à logementId est trouvé, il est défini à l'aide de setLogement, ce qui mettra à jour l'état de la composante avec les données du logement. Sinon, il y a une redirection vers la page "/404"
         }
         setDataLoading(false);
       } catch (error) {
