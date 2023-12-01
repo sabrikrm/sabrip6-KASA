@@ -7,7 +7,7 @@ import PageNotFound from "./pages/PageNotFound";
 function RoutesConfig() {
   return (
     <Routes>
-      <Route path="/P6-Sabri-OpenClassrooms" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/logement/:logementId" element={<Logement />} />
       <Route path="/*" element={<PageNotFound />} /> 
